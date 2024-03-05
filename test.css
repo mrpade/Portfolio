@@ -1,0 +1,26 @@
+body{
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+button{
+    background-color: hsl(212, 85%, 46%);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color .2s ease-in;
+    margin-bottom: 5px;
+}
+button:hover{
+    background-color: hsl(212, 85%, 37%);
+}
+p{
+    margin-bottom: 20px;
+}
