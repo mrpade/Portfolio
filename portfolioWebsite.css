@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 :root{
     --primary-color : #2C2E48;
     --secondary-color : #59C174;
@@ -6,8 +9,6 @@
     --lg-border-radius : 10px;
     --border : 2px solid #59C174;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
 body{
@@ -54,6 +55,9 @@ body{
     cursor: pointer;
     transition: background-color .3s ease-in-out, border .3s ease-in-out;
 }
+#contacts-btn{
+    position: relative;
+}
 .btn:hover{
     background-color: var(--primary-color);
     border: var(--border);
@@ -80,14 +84,30 @@ body{
     cursor: pointer;
     transition: border-bottom .5s ease-in-out, scale .5s ease-in-out;
     font-weight: 600;
+    animation: slideIn 1s ease-in-out 1 normal forwards;
 }
-.menu-item:hover{
-    border-bottom: var(--border);
-    scale: 1.2;
+#webdev{
+    animation-delay:  .3s;
+}
+#photo{
+    animation-delay:  .1s;
 }
 .menu-item-active{
     scale: 1.2;
     border-bottom: var(--border);
+}
+.menu-item i{
+    margin-inline-start: 5px;
+    transform: translateY(-5px);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform .3s ease-in-out, opacity .5s ease-in-out, visibility .4s ease-in-out;
+}
+
+.menu-item:hover i{
+    transform: translateY(1px);
+    opacity: 1;
+    visibility: visible;
 }
 
 .me-section{
@@ -97,7 +117,7 @@ body{
     padding-block: 10px;
     display: flex;
     justify-content: center;
-    transition: opacity .2s ease-in-out, visibility .2s ease-in-out, transform .5s ease-in-out;
+    animation: display .5s ease-in-out 1 normal forwards;
 }
 .me-section1{
     width: 40%;
@@ -109,6 +129,10 @@ body{
 .me-section1 p{
     font-size: 1.4rem;
     line-height: 2rem;
+}
+.me-section p span{
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 .me-section2{
     width: 50%;
@@ -130,6 +154,7 @@ body{
     display: flex;
     justify-content: center;
     transition: transform .5s ease-in-out;
+    animation: display .5s ease-in-out 1 normal forwards;
 }
 .webdev-section1{
     width: 40%;
@@ -158,9 +183,11 @@ body{
     margin-bottom: 50px;
     padding-block: 10px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    animation: display .5s ease-in-out 1 normal forwards;
 }
-.photo-section1{
+/*.photo-section1{
     width: 40%;
     padding: 10px;
     display: flex;
@@ -179,6 +206,60 @@ body{
 }
 .photo-section2 img{
     max-width: 100%;
+}*/
+
+.photo-category{
+    display: flex;
+    justify-content: space-evenly;
+}
+.cat-card{
+    position: relative;
+    width: 20%;
+    height: fit-content;
+    display: block;
+    border-radius: var(--lg-border-radius);
+    cursor: pointer;
+    transition: scale .2s ease-in-out;
+    animation: cardSlide 1s ease-in-out 1 normal forwards;
+}
+#cat2{
+    animation-delay: .1s;
+}
+#cat3{
+    animation-delay: .2s;
+}
+#cat4{
+    animation-delay: .3s;
+}
+.cat-card img {
+    width: 100%;
+    border-radius: var(--lg-border-radius);
+}
+.cat-card p {
+    text-align: center;
+    transition: opacity .3s ease-out, visibility .3s ease-out, transform .3s ease-out;
+}
+
+.box-shadow{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 84%;
+    background-color: black;
+    opacity: 0.7;
+    border-radius: var(--lg-border-radius);
+    transition: opacity .2s ease-in-out;
+}
+.cat-card:hover{
+    scale: 1.05;
+}
+.cat-card:hover .box-shadow {
+    opacity: 0;
+}
+.cat-card:hover p{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-100%);
 }
 
 .design-section{
@@ -187,7 +268,8 @@ body{
     margin-bottom: 50px;
     padding-block: 10px;
     display: flex;
-    justify-content: center;    
+    justify-content: center;
+    animation: display .5s ease-in-out 1 normal forwards;  
 }
 .design-section1{
     width: 40%;
@@ -216,6 +298,100 @@ body{
 
 .section-active{
     display: flex;
+}
+
+/*ANIMATIONs*/
+/*SECTIONS ANIMATION*/
+
+@keyframes display {
+    0%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* MENU ANIMATION*/
+
+@keyframes slideIn {
+    0%{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes cardSlide {
+    0%{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.contacts{
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    margin-block-start: 62%;
+    padding-inline: 15px;
+    background-color: var(--primary-color);
+    border: var(--border);
+    border-radius: var(--lg-border-radius);
+    transform: translateY(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: scale .3s ease-in-out, transform .3s ease-in-out, opacity .3s ease-in-out;
+}
+.phone, .email {
+    display: flex;
+    align-items: center;
+    margin-block: 10px;
+    cursor: pointer;
+    transition: scale .2s ease-in-out;
+}
+.phone:hover, .email:hover {
+    scale: 1.03;
+}
+.contacts p{
+    margin-block: 0;
+    margin-inline-start: 10px;
+}
+.close-btn{
+    width: fit-content;
+    margin-block-start: 10px;
+    margin-left: auto;
+    cursor: pointer;
+}
+#close-icon{
+    transition: rotate .2s ease-in-out;
+}
+.contacts img{
+    max-width: 20px;
+}
+.close-btn:hover #close-icon{
+    rotate: 90deg;
+}
+.darkener{
+    position: absolute;
+    z-index: 90;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+    scale: 0;
+    transition: scale .3s ease-in-out;
 }
 
 .footer{

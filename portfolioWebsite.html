@@ -1,64 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="portfolioWebsite.css">
-    <script src="https://kit.fontawesome.com/e7ca904ebc.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="portfolioWebsite.css" />
+    <script
+      src="https://kit.fontawesome.com/e7ca904ebc.js"
+      crossorigin="anonymous"
+    ></script>
     <title>mr Pade</title>
-</head>
-<body>
-    
+  </head>
+  <body>
     <div class="navbar">
-        <h1>mrPade</h1>
-        <div class="btn-grp">
-            <div class="btn btn-active">Portfolio</div>
-            <div class="btn">Contacts</div>
-            <div class="btn">Socials</div>
+      <h1>mrPade</h1>
+      <div class="btn-grp">
+        <div class="btn btn-active" id="portfolio-btn">Portfolio</div>
+        <div class="btn" id="contacts-btn">
+          Contacts
+          <div class="contacts">
+            <div class="close-btn">
+              <img src="IMAGES/x-close-delete-svgrepo-com.svg"
+                alt="" id="close-icon"/>
+            </div>
+            <div class="phone">
+              <img src="IMAGES/phone-svgrepo-com.svg" alt=""/>
+              <p>+237 655 558 197</p>
+            </div>
+            <div class="email">
+              <img src="IMAGES/email-1572-svgrepo-com.svg" alt=""/>
+              <p>ddjock12@gmail.com</p>
+            </div>
+          </div>
         </div>
+        <div class="btn" id="socials-btn">Socials</div>
+      </div>
     </div>
 
     <div class="menu">
-        <div class="menu-item">WEB DEVELOPMENT</div>
-        <div class="menu-item">PHOTOGRAPHY</div>
-        <div class="menu-item">GRAPHIC DESIGN</div>
+      <div class="menu-item" data-id="webdev" id="webdev">
+        WEB DEVELOPMENT
+        <i class="fa-solid fa-angle-down"></i>
+      </div>
+      <div class="menu-item" data-id="photo" id="photo">
+        PHOTOGRAPHY
+        <i class="fa-solid fa-angle-down"></i>
+      </div>
+      <div class="menu-item" data-id="design" id="design">
+        GRAPHIC DESIGN
+        <i class="fa-solid fa-angle-down"></i>
+      </div>
     </div>
 
     <div class="container">
-        <div class="me-section" id="about-me">
-            <div class="me-section1">
-                <p>
-                    Hello! My name is Patrick Ade. <br>
-                    I'm a <em>Creative Thinker & Solver</em> classified by society
-                    as a Graphic Designer, Photographer and Web Developer. <br>
-                    I transform your message into <b>EYE-CATCHING VISUALS</b> for your target. <br>
-                    Looking forward to work with me?
-                </p>
-                <div class="btn">Hit me up!</div>
-            </div>
-            <div class="me-section2">
-                <img src="IMAGES/20231209_110654.jpg" alt="">
-            </div>
+      <div class="me-section" id="about-me">
+        <div class="me-section1">
+          <p>
+            Hello! My name is Patrick Ade. <br />
+            I'm a <em>Creative Thinker & Solver</em> classified by society as a
+            Graphic Designer, Photographer and Web Developer. <br />
+            I transform your message into <span>eye-catching visuals</span> for
+            your target. <br />
+            Looking forward to work with me?
+          </p>
+          <div class="btn">Hit me up!</div>
         </div>
-        <div class="section webdev-section">
-            <div class="webdev-section1">
-                <p>
-                    Hello! My name is Patrick Ade. <br>
-                    I'm a Junior Front-end Web Developer. I translate the vision and goals <br>
-                    of your brand into visually appealing Websites. <br>
-                    I embark HTML, CSS, JavaScript, Bootstrap and Next.Js in my tech
-                    stack.
-                    Looking forward to work with me?
-                </p>
-                <div class="btn">Hit me up!</div>
-            </div>
-            <div class="webdev-section2">
-                <img src="IMAGES/web development _ online, website, internet, www, keyboard, mouse, wheelbarrow.svg" alt="">
-            </div>
+        <div class="me-section2">
+          <img src="IMAGES/linkedin.jpg" alt="" />
         </div>
-    
-        <div class="section photo-section">
-            <div class="photo-section1">
+      </div>
+      <div class="section webdev-section" data-id="webdev">
+        <div class="webdev-section1">
+          <p>
+            Hello! My name is Patrick Ade. <br />
+            I'm a Junior Front-end Web Developer. I translate the vision and
+            goals <br />
+            of your brand into visually appealing Websites. <br />
+            I embark HTML, CSS, JavaScript, Bootstrap and Next.Js in my tech
+            stack. Looking forward to work with me?
+          </p>
+          <div class="btn">Hit me up!</div>
+        </div>
+        <div class="webdev-section2">
+          <img
+            src="IMAGES/web development _ online, website, internet, www, keyboard, mouse, wheelbarrow.svg"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div class="section photo-section" data-id="photo">
+        <!--<div class="photo-section1">
                 <p>
                     Hello! My name is Patrick Ade. <br>
                     I'm a Portrait, Fashion, Events and Product photographer. <br> 
@@ -72,50 +103,88 @@
             </div>
             <div class="photo-section2">
                 <img src="IMAGES/real estate _ house, home, moving, estate, building, outgrow, man, people.svg" alt="">
-            </div>
+            </div>-->
+        <div class="photo-category">
+          <div class="cat-card" id="cat1">
+            <img
+              src="IMAGES/crocodile_wanted__one_piece_ch__1058__by_bryanfavr_dfc7qu0.png"
+              alt=""
+            />
+            <div class="box-shadow"></div>
+            <p>Sir Crocodile</p>
+          </div>
+          <div class="cat-card" id="cat2">
+            <img
+              src="IMAGES/edward_newgate_shirohige_bounty__one_piece_ch_957__by_bryanfavr_ddh2a1w.png"
+              alt=""
+            />
+            <div class="box-shadow"></div>
+            <p>Edward Newgate</p>
+          </div>
+          <div class="cat-card" id="cat3">
+            <img
+              src="IMAGES/gol_d__roger_bounty__one_piece_ch__957__by_bryanfavr_ddh2a1n.png"
+              alt=""
+            />
+            <div class="box-shadow"></div>
+            <p>Gol D Roger</p>
+          </div>
+          <div class="cat-card" id="cat4">
+            <img
+              src="IMAGES/shanks_bounty__one_piece_ch__957__by_bryanfavr_ddh2a1s.png"
+              alt=""
+            />
+            <div class="box-shadow"></div>
+            <p>Red Hair Shanks</p>
+          </div>
         </div>
-    
-        <div class="section design-section">
-            <div class="design-section1">
-                <p>
-                    Hello! My name is Patrick Ade. <br>
-                    I'm a Graphic Designer. <br> 
-                    I transform the vision and goals of your brand into visually <br> 
-                    appealing illustrations. I'm a creative thinker and I master some of <br>
-                    Adobe Suite softwares such as Illustrator CC & After Effect.
-                    Looking forward to work with me?
-                </p>
-                <div class="btn">Hit me up!</div>
-            </div>
-            <div class="design-section2">
-                <img src="IMAGES/hobby, design _ paint, painting, art, graphic design, activity, leisure.svg" alt="">
-            </div>
+      </div>
+
+      <div class="section design-section" data-id="design">
+        <div class="design-section1">
+          <p>
+            Hello! My name is Patrick Ade. <br />
+            I'm a Graphic Designer. <br />
+            I transform the vision and goals of your brand into visually <br />
+            appealing illustrations. I'm a creative thinker and I master some of
+            <br />
+            Adobe Suite softwares such as Illustrator CC & After Effect. Looking
+            forward to work with me?
+          </p>
+          <div class="btn">Hit me up!</div>
         </div>
+        <div class="design-section2">
+          <img
+            src="IMAGES/hobby, design _ paint, painting, art, graphic design, activity, leisure.svg"
+            alt=""
+          />
+        </div>
+      </div>
     </div>
 
     <div class="footer">
-        <span></span>
-        <div class="socials">
-            <a href="https://www.linkedin.com/in/patrick-ade-aa3bb6229/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BHS%2FxQqVGSo%2BDRX%2FS7OACXQ%3D%3D" target="_blank">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-        </div>
-        <div class="socials">
-            <a href="https://github.com/mrpade" target="_blank">
-                <i class="fa-brands fa-github"></i>
-            </a>
-        </div>
-        <div class="socials">
-            <a href="" target="_blank">
-                <i class="fa-brands fa-square-behance"></i>
-            </a>
-        </div>
-        <span></span>
+      <span></span>
+      <div class="socials">
+        <a
+          href="https://www.linkedin.com/in/patrick-ade-aa3bb6229/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BHS%2FxQqVGSo%2BDRX%2FS7OACXQ%3D%3D"
+          target="_blank"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </div>
+      <div class="socials">
+        <a href="https://github.com/mrpade" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+      <div class="socials">
+        <a href="" target="_blank">
+          <i class="fa-brands fa-square-behance"></i>
+        </a>
+      </div>
+      <span></span>
     </div>
+  </body>
 
-
-</body>
-
-<script src="portfolioWebsite.js"></script>
-
+  <script src="portfolioWebsite.js"></script>
 </html>
