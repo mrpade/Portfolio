@@ -11,17 +11,19 @@
     <title>mr Pade</title>
   </head>
   <body>
+
+    <!--NAVBAR-->
     <div class="navbar">
       <h1>mrPade</h1>
       <div class="btn-grp">
         <div class="btn btn-active" id="portfolio-btn">Portfolio</div>
-        <div class="btn" id="contacts-btn">
-          Contacts
+        <div class=".contacts-container">
+          <div class="btn" id="contacts-btn">Contacts</div>
           <div class="contacts">
-            <div class="close-btn">
+            <!--<div class="close-btn">
               <img src="IMAGES/x-close-delete-svgrepo-com.svg"
                 alt="" id="close-icon"/>
-            </div>
+            </div>-->
             <div class="phone">
               <img src="IMAGES/phone-svgrepo-com.svg" alt=""/>
               <p>+237 655 558 197</p>
@@ -32,10 +34,26 @@
             </div>
           </div>
         </div>
-        <div class="btn" id="socials-btn">Socials</div>
+        <div class="socials-container">
+          <div class="btn" id="socials-btn">Socials</div>
+          <div class="socials">
+            <div class="socials-flex">
+              <a href="https://www.linkedin.com/in/patrick-ade-aa3bb6229/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BHS%2FxQqVGSo%2BDRX%2FS7OACXQ%3D%3D" target="_blank" class="linkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/mrpade" target="_blank" class="github">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://web.facebook.com/me/" target="_blank" class="facebook">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
+      <!--BUTTON TO SWITCH BETWEEN EACH SECTION-->
     <div class="menu">
       <div class="menu-item" data-id="webdev" id="webdev">
         WEB DEVELOPMENT
@@ -51,7 +69,10 @@
       </div>
     </div>
 
+    <!--BODY-->
     <div class="container">
+
+      <!--ABOUT ME SECTION-->
       <div class="me-section" id="about-me">
         <div class="me-section1">
           <p>
@@ -68,6 +89,8 @@
           <img src="IMAGES/linkedin.jpg" alt="" />
         </div>
       </div>
+
+      <!--WEB DEVELOPMENT SERVICES SECTION-->
       <div class="section webdev-section" data-id="webdev">
         <div class="webdev-section1">
           <p>
@@ -88,6 +111,7 @@
         </div>
       </div>
 
+      <!--PHOTOGRAPHY SERVICES SECTION-->
       <div class="section photo-section" data-id="photo">
         <!--<div class="photo-section1">
                 <p>
@@ -140,6 +164,7 @@
         </div>
       </div>
 
+      <!--GRAPHIC DESIGN SERVICES SECTION-->
       <div class="section design-section" data-id="design">
         <div class="design-section1">
           <p>
@@ -164,7 +189,7 @@
 
     <div class="footer">
       <span></span>
-      <div class="socials">
+      <div class="footer-socials">
         <a
           href="https://www.linkedin.com/in/patrick-ade-aa3bb6229/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BHS%2FxQqVGSo%2BDRX%2FS7OACXQ%3D%3D"
           target="_blank"
@@ -172,12 +197,12 @@
           <i class="fa-brands fa-linkedin"></i>
         </a>
       </div>
-      <div class="socials">
+      <div class="footer-socials">
         <a href="https://github.com/mrpade" target="_blank">
           <i class="fa-brands fa-github"></i>
         </a>
       </div>
-      <div class="socials">
+      <div class="footer-socials">
         <a href="" target="_blank">
           <i class="fa-brands fa-square-behance"></i>
         </a>
