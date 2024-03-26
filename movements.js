@@ -1,12 +1,12 @@
-let box = document.getElementById('theBox');
-let top = document.getElementById('top');
-let bottom = document.getElementById('bottom');
-let left = document.getElementById('left');
-let right = document.getElementById('right');
+let box = document.querySelector('#theBox');
+let top = document.querySelector('#top');
+let bottom = document.querySelector('#bottom');
+let left = document.querySelector('#left');
+let right = document.querySelector('#right');
 
-top.addEventListener('click', function(){
+let moveTop = () =>{
     box.style.transform = 'translateY(-100px)'
-})
+};
 bottom.addEventListener('click', function(){
     box.style.transform = 'translateY(100px)'
 })

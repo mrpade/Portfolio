@@ -1,0 +1,43 @@
+body{
+    width: 100%;
+    padding-block: 25px;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin-inline: auto;
+}
+.slider{
+    display: flex;
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    height: 10px;
+    display: none;
+}
+img{
+    max-width: 25%;
+    margin-inline: 10px;
+    border-radius: 15px;
+    transition: transform .3s ease-in;
+}
+span{
+    z-index: 99;
+    width: 50px;
+    height: 50px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 3px solid #59C174;
+    background-color: whitesmoke;
+    cursor: pointer;
+    transition: scale .2s ease-in, background-color .2s ease-in, border .2s ease-in;
+}
+span:hover{
+    scale: 0.8;
+    background-color: #59C174;
+    border: 3px solid whitesmoke;
+}

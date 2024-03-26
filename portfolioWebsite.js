@@ -12,13 +12,18 @@ let contactsInfo = document.querySelectorAll('.contacts p');
 let socials = document.querySelector(".socials");
 let socialsInfo = document.querySelectorAll('.socials p');
 
-let gallery = document.querySelector('.gallery');
+let categoriesContainer = document.querySelector('.photo-category');
+let photoCategory = document.querySelectorAll('.cat-card');
+let gallery = document.querySelectorAll('.gallery');
 let galleryContainer = document.querySelector('.gallery-container');
 let galleryImage = document.querySelectorAll('.gallery-image');
-let previous = document.querySelector('#previous');
-let next = document.querySelector('#next');
-let photoCategory = document.querySelectorAll('.cat-card');
+let portraits = document.querySelector('#cat-portraits');
 let galleryCloseBtn = document.querySelector('#galleryCloseBtn');
+
+let nextBtn = document.querySelectorAll('.next');
+let previousBtn = document.querySelectorAll('.previous');
+let slider = document.querySelector('.gallery-container');
+let image = document.querySelector('#image1');
 
 
 /*SWITCHING BETWEEN MENU SECTIONS*/
@@ -109,59 +114,36 @@ contacts.addEventListener('mouseout', () => {
   }, 5000);
 })
 
-/*next.addEventListener('click', () => {
-  for (i = 0; i < galleryImage.length; i++){
-    galleryImage.forEach(element => {
-      element.classList.remove('gallery-image-active');
-    })
-    galleryImage[i].classList.add('gallery-image-active');
-  }
+/*portraits.addEventListener('click', () => {
+    portaitsGallery.style.display = 'flex';
 })*/
 
-let i = 0;
-let last = galleryImage.length-1;
-console.log(last);
-
-next.addEventListener('click', () => {
-  previous.style.scale = '1';
-  i++;
-  console.log(i);
-  
-  galleryImage.forEach((element) => {
-    element.classList.remove('gallery-image-active');
-  })
-  galleryImage[i].classList.add('gallery-image-active');
-  if(i === last){
-    previous.style.scale = '0';
-    i = 0;
-    galleryImage.forEach((element) => {
-      element.classList.remove('gallery-image-active');
-    })
-    galleryImage[i].classList.add('gallery-image-active');
-  }
-})
-
-previous.addEventListener('click', () => {
-  i--;
-  console.log(i);
-
-  galleryImage.forEach(element => {
-    element.classList.remove('gallery-image-active');
-  })
-  galleryImage[i].classList.add('gallery-image-active');
-
-  if(i === 0){
-    previous.style.scale = '0';
-  }
-})
-
-photoCategory.forEach(element => {
+nextBtn.forEach(element => {
   element.addEventListener('click', () => {
-    gallery.style.display = 'block';
-    galleryContainer.style.boxShadow = '0 0 5px #a8a8a8';
+    let imageWidth = image.getBoundingClientRect().width;
+    slider.scrollLeft += 300;
   })
 })
 
-galleryCloseBtn.addEventListener('click', () => {
-  gallery.style.display = 'none';
-})
+/*SWITCHING BETWEEN PHOTO CATEGORIES*/
+
+photoCategory.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    photoCategory.forEach((item) => {
+      item.classList.remove("photo-cat-active");
+    });
+    item.classList.add("photo-cat-active");
+
+    gallery.forEach((gallery) => {
+      gallery.classList.remove("gallery-active");
+    });
+    let id = item.getAttribute("data-id");
+    let activeGallery = Array.from(gallery).filter((gallery) => {
+      return gallery.dataset.id === id;
+    });
+    categoriesContainer.style.marginBottom = '75px';
+    activeGallery.forEach((gallery) => {
+      gallery.classList.add("gallery-active");
+    });
+  });
+});
