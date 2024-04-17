@@ -13,7 +13,9 @@
 
 body{
     position: relative;
+    margin-inline: 0;
     width: 100%;
+    min-height: 100vh;
     background-color: var(--primary-color);
     color: var(--third-color);
     font-family: "Poppins", sans-serif;
@@ -36,8 +38,8 @@ body{
     align-items: center;
     color: var(--third-color);
 }
-.navbar h1{
-    letter-spacing: -5px;
+#logo{
+    max-width: 100px;
 }
 .btn-grp{
     margin-left: auto;
@@ -157,7 +159,9 @@ body{
     font-weight: 600;
     animation: slideIn 1s ease-in-out 1 normal forwards;
 }
-
+#webdev{
+    animation-delay:  .3s;
+}
 
 .menu-item-active{
     scale: 1.2;
@@ -178,12 +182,10 @@ body{
 }
 
 
-/*.container{
- position: relative;   
-}*/
-#webdev{
-    animation-delay:  .3s;
+.container{
+    margin-top: 50px;
 }
+
 .me-section{
     width: 85%;
     margin-inline: auto;
@@ -445,10 +447,12 @@ body{
 
 
 .footer{
+    /*position: absolute;
+    bottom: 0;*/
     width: 95%;
     height: 75px;
-    margin-top: 25px;
     margin-inline: auto;
+    margin-top: auto;
     display: flex;
     justify-content: center;
     align-items: center;

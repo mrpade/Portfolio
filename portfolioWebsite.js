@@ -115,7 +115,7 @@ contacts.addEventListener('mouseout', () => {
 })
 
 /*portraits.addEventListener('click', () => {
-    portaitsGallery.style.display = 'flex';
+    portraitsGallery.style.display = 'flex';
 })*/
 
 nextBtn.forEach(element => {
